@@ -64,7 +64,7 @@ export function login( obj, history ) {
   return {
     type: LOGIN,
     payload: axios.post( URL.login, obj ).then( response => {
-      history.push('/shop');
+      history.push('/shop')
       return response.data;
     })
   };

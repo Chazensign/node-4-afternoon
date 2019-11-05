@@ -18,6 +18,7 @@ app.use(session({
   saveUninitialized: false,
   secret: SESSION_SECRET
 }))
+
 app.use(checkForSession.checkForUser)
 app.use(express.static(`${__dirname}/../build`))
 

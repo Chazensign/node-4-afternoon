@@ -9,7 +9,6 @@ module.exports = {
 
     const user = users.find(
       user => {
-        console.log(user)
         return user.username === username && user.password === password
       }
     );
@@ -17,7 +16,7 @@ module.exports = {
       session.user.username = user.username
       res.status(200).send(session.user)
     } else {
-      res.status(200). send("Unauthorized")
+      res.status(500).send("Unauthorized")
     }
   },
   register: (req, res) => {
